@@ -1,18 +1,18 @@
 import { useState } from 'react';
 
 const Example = () => {
-  let ValArry = useState(0);
+  let [val, setVal] = useState(0);
 
   return (
     <>
       <input
         type="text"
         onChange={(e) => {
-          const setFn = ValArry[1];
-          setFn(e.target.value);
+          // const setFn = ValArry[1];
+          setVal(e.target.value);
         }}
       />
-      = {ValArry[0]}
+      = {val}
     </>
   );
 };

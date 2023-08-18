@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 // POINT ラジオボタンの実装
 const Example = () => {
-  const [fruit, setFruit] = useState("Apple");
-  const onChange = (e) => setFruit(e.target.value);
+  const [fruit, setFruit] = useState('Apple');
+  // const onChange = (e) => setFruit(e.target.value);
+  const onChange = (e) => {
+    console.log('e', e);
+    console.log('value', e.target);
 
-  const RADIO_COLLECTION = ["Apple", "Banana", "Cherry"];
+    setFruit(e.target.value);
+  };
+  const RADIO_COLLECTION = ['Apple', 'Banana', 'Cherry'];
 
   return (
     <>
